@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌤️ Weather Dashboard</h1>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Escribe una ciudad (ej. London)...">
+            <button id="searchBtn">Buscar</button>
+        </div>
+
+        <div id="weatherDisplay" class="weather-info hidden">
+            <h2 id="cityName">--</h2>
+            <div class="temp-box">
+                <span id="temperature">--</span>°C
+            </div>
+            <p id="description">--</p>
+        </div>
+
+        <div class="forecast-section hidden">
+            <h3>Pronóstico (Próximos días)</h3>
+            <div id="forecastContainer" class="forecast-grid">
+                </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
