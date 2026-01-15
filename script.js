@@ -14,7 +14,7 @@ searchBtn.addEventListener('click', () => {
         Swal.fire({
             icon: 'warning',
             title: 'Oops...',
-            text: 'Por favor escribe el nombre de una ciudad.'
+            text: 'Please write the name of a city'
         });
     }
 });
@@ -23,7 +23,7 @@ async function getWeatherData(city) {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=es`);
         
-        if (!response.ok) throw new Error("Ciudad no encontrada");
+        if (!response.ok) throw new Error("City not found.");
         
         const data = await response.json();
         
