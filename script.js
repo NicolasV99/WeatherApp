@@ -1,5 +1,8 @@
-const apiKey = '6e8c518793fefa7c3aebc1fd7f0708a6'; 
+const config = {
+    API_KEY: '6e8c518793fefa7c3aebc1fd7f0708a6'
+};
 
+const apiKey = config.API_KEY;
 const searchBtn = document.getElementById('searchBtn');
 const cityInput = document.getElementById('cityInput');
 const weatherDisplay = document.getElementById('weatherDisplay');
@@ -21,7 +24,7 @@ searchBtn.addEventListener('click', () => {
 
 async function getWeatherData(city) {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=es`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=ing`);
         
         if (!response.ok) throw new Error("City not found.");
         
@@ -29,7 +32,7 @@ async function getWeatherData(city) {
         
         displayCurrentWeather(data);
         
-        const forecastResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=es`);
+        const forecastResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=ing`);
         const forecastData = await forecastResponse.json();
         
         processForecast(forecastData.list);

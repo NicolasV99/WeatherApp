@@ -6,6 +6,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    box-sizing: border-box;
+    padding-bottom: 80px;
 }
 
 .container {
@@ -16,6 +18,7 @@ body {
     text-align: center;
     width: 90%;
     max-width: 450px;
+    margin-bottom: 20px;
 }
 
 .search-box {
@@ -48,7 +51,7 @@ button:hover {
 
 .weather-info {
     margin-top: 20px;
-    padding: 20px;
+    padding: 10px;
     background-color: #f8f9fa;
     border-radius: 10px;
 }
@@ -62,7 +65,7 @@ button:hover {
 }
 
 .temp-box {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #000;
 }
